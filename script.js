@@ -6,8 +6,10 @@ const container = document.querySelector(".container");
 
 
 for (let i = 0; i < 16; i++) {
+    
     const row1 = document.createElement("div");
     row1.id = "container2";
+    //row1.style.height = ``;
     container.appendChild(row1);
     console.log(i)
     for (let i = 0; i < 16; i++) {
