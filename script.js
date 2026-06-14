@@ -1,6 +1,8 @@
 
 
-const container = document.querySelector(".container");
+let container = document.querySelector(".container");
+let container0 = document.querySelector(".container0");
+const btn = document.querySelector("#btn")
 
 
 
@@ -23,6 +25,27 @@ for (let i = 0; i < number; i++) {
 }
 }
 
+
+function askGrid() {
+
+    let numberGrid = prompt("How many squares per side do you want for the new grid?", 16);
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    if (numberGrid <= 100) {
+        Grid(numberGrid)
+    }
+    else {
+        Grid(16)
+        alert("pick a number lower than or equal to 100")
+    }
+
+    
+
+
+}
+
 Grid(16);
 
+btn.addEventListener("click", askGrid);
 
