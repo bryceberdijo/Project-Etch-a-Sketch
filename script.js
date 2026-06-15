@@ -11,21 +11,30 @@ for (let i = 0; i < number; i++) {
     const row1 = document.createElement("div");
     row1.id = "container2";
     container.appendChild(row1);
-    console.log(i)
+    //console.log(i)
     for (let i = 0; i < number; i++) {
-        const row2 = document.createElement("div");
+        let row2 = document.createElement("div");
         row2.id = "container3";
         row1.appendChild(row2);
 
+        function newColor() {
         let redColor = (Math.floor(Math.random() * 265));
         let greenColor = (Math.floor(Math.random() * 265));
         let blueColor = (Math.floor(Math.random() * 265));
+        
+        let newColor = `rgb( ${redColor}, ${greenColor}, ${blueColor})`
+        return newColor
+        }
 
         row2.addEventListener("mouseover", function () {
-        row2.style.backgroundColor = `rgb( ${redColor}, ${greenColor}, ${blueColor})`;
+        
+        let color = newColor()
+        row2.style.backgroundColor = color;
+        
+        
+
         })
-        console.log(i);
-    
+     
 }
 }
 }
