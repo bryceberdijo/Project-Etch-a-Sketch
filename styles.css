@@ -45,7 +45,7 @@ body {
 #container3 {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
+    border: 1px solid   grey;
     background-color: white;
     text-align: center;
     height: auto;

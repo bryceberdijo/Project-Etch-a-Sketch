@@ -16,8 +16,13 @@ for (let i = 0; i < number; i++) {
         const row2 = document.createElement("div");
         row2.id = "container3";
         row1.appendChild(row2);
+
+        let redColor = (Math.floor(Math.random() * 265));
+        let greenColor = (Math.floor(Math.random() * 265));
+        let blueColor = (Math.floor(Math.random() * 265));
+
         row2.addEventListener("mouseover", function () {
-        row2.style.backgroundColor = "black";
+        row2.style.backgroundColor = `rgb( ${redColor}, ${greenColor}, ${blueColor})`;
         })
         console.log(i);
     
